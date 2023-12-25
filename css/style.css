@@ -387,7 +387,7 @@ header {
     #hero {
         flex-direction: column;
         width: 100vw;
-        
+        padding-bottom: 20%;
         align-items: center;
     }
 
