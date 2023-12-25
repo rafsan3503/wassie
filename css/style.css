@@ -360,6 +360,7 @@ header {
 
     #hero {
         gap: 20px;
+        padding-bottom: 10%;
     }
 
     .subtitle {
