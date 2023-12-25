@@ -354,6 +354,10 @@ header {
         line-height: 38px;
     }
 
+    #ca{
+        display: none;
+    }
+
     #hero {
         gap: 20px;
     }
