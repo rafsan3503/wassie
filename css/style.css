@@ -55,13 +55,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url(../media/background.webp);
+    background-image: url(../media/5205447.jpg);
     background-position: center;
     background-size: cover;
     width: 100vw;
     background: linear-gradient(rgb(0 0 0/ 20%), rgb(0 0 0/ 20%)), url(../media/5205447.jpg);
     background-size: cover;
-    padding-top: 63px;
+    
     /* padding-bottom: 20px; */
     /* height: 100vh; */
     background-position: center;
@@ -212,7 +212,7 @@ header {
 }
 
 .right-header a:hover {
-    color: black;
+    color: rgb(139, 12, 12);
 }
 
 .contract-button {
@@ -355,12 +355,13 @@ header {
     }
 
     #ca{
-        display: none;
+        
+        font-size: 14px;
     }
 
     #hero {
         gap: 20px;
-        padding-bottom: 10%;
+        
     }
 
     .subtitle {
@@ -450,7 +451,7 @@ header {
         flex-direction: column;
         background-color: black;
         padding-top: 40px;
-        background: linear-gradient(rgb(0 0 0/ 20%), rgb(0 0 0/ 20%)), url(../media/stadium.jpg);
+        
         background-size: cover;
     }
 
