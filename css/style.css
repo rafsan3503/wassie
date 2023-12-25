@@ -1,0 +1,460 @@
+@font-face {
+    font-family: dumb;
+    src: url(2Dumb.ttf);
+}
+
+@font-face {
+    font-family: song;
+    src: url(song.ttf);
+}
+
+
+:root {
+    --base-color: black;
+    --alternate-color: #121215;
+    --accent-color: #b73741;
+    --accent-color-alt: #ffe8bb;
+
+    --text-color: #feefd2;
+    --current-color: #b73741;
+    --current-color-transparency: black;
+
+    --width: 56vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    background-color: var(--base-color);
+    color: white;
+    overflow-x: hidden;
+    font-family: 'dumb', sans-serif;
+    font-weight: 500;
+
+    font-family: 'Comic Neue', cursive;
+    font-family: 'song', sans-serif;
+
+}
+
+
+
+#hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../media/background.webp);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    background: linear-gradient(rgb(0 0 0/ 20%), rgb(0 0 0/ 20%)), url(../media/5205447.jpg);
+    background-size: cover;
+    padding-top: 63px;
+    /* padding-bottom: 20px; */
+    /* height: 100vh; */
+    background-position: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.text {
+    width: 60ch;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text.top {
+    font-size: 44px;
+    z-index: 1;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.text-500 {
+    font: normal normal 500 18px/20px 'Inter';
+}
+
+.text-400 {
+    font: normal normal 400 16px/25px 'Inter';
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #bebebe;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(42, 42, 42);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    width: var(--width);
+    justify-content: center;
+    z-index: 110;
+    width: 100vw;
+
+    position: absolute;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    font-weight: 500;
+    margin: 10px 0px 10px 0px;
+    padding: 20px;
+    z-index: 100;
+    width: 90vw;
+}
+
+
+.useful a {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.logo {
+    width: 100%;
+    align-items: center;
+    filter: drop-shadow(0px 10px 5px rgba(0, 0, 0, 0.2));
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+    overflow-x: clip;
+    filter: drop-shadow(0 0 0.15rem black);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+@keyframes wobble {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    50% {
+        transform: rotateZ(-10deg);
+    }
+
+    75% {
+        transform: rotateZ(5deg);
+    }
+
+    100% {
+        transform: rotateZ(0deg);
+    }
+}
+
+.headbar {
+    border: 0 solid #3a3a3a;
+    border-bottom-width: 2px;
+    padding: 12px 0px;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-weight: 700;
+}
+
+
+.right-header {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.right-header a {
+    text-decoration: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    animation: all 1s ease;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.right-header a:hover {
+    color: black;
+}
+
+.contract-button {
+    display: flex;
+    color: var(--text-color);
+    font-weight: 700;
+    align-items: center;
+    position: relative;
+    letter-spacing: 0;
+    background: var(--current-color) 0 0 no-repeat padding-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+
+    text-decoration: none;
+
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    width: fit-content;
+    border-radius: 0.2rem;
+
+    
+}
+
+.blink {
+    animation: blink .75s step-end infinite;
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        color: transparent
+    }
+
+    50% {
+        color: rgba(245, 245, 245)
+    }
+}
+
+
+
+
+.container {
+    width: 600px;
+    height: 600px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    transform: scale(.9);
+}
+
+.logo-header {
+    width: 200px;
+}
+
+#menuButton {
+    display: none;
+    filter: invert(1);
+}
+
+.polaroid img {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 8px;
+    padding-bottom: 60px;
+    border-radius: 16px;
+
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.polaroid {
+    width: 580px;
+    height: 600px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    box-shadow: 0px 2px 30px #00000031;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 0.3em solid #e8e8e8;
+    z-index: 100;
+    background-color: #e8e8e8;
+}
+
+.polaroid:nth-child(4n+1) {
+    transform: rotate(-3deg);
+}
+
+.polaroid:nth-child(4n+2) {
+    transform: rotate(4deg);
+}
+
+.polaroid:nth-child(4n+3) {
+    transform: rotate(10deg);
+}
+
+.polaroid:nth-child(4n+4) {
+    transform: rotate(4deg);
+}
+
+
+.top {
+    z-index: 150;
+}
+
+.bottom {
+    z-index: 50;
+}
+
+@media only screen and (max-width: 600px) {
+    section {
+        width: 100vw;
+    }
+
+    .name {
+        font-size: 3rem;
+        line-height: 38px;
+    }
+
+    #hero {
+        gap: 20px;
+    }
+
+    .subtitle {
+        font-size: 1.3rem;
+    }
+
+    .header {
+        width: 99vw;
+        padding: 10px;
+    }
+
+    .logo-header {
+        width: 40px;
+    }
+
+    header {
+        position: fixed;
+        width: 99vw;
+
+    }
+
+
+    #hero {
+        flex-direction: column;
+        width: 100vw;
+        padding-top: 60px;
+        align-items: center;
+    }
+
+
+
+    .mobile {
+        display: flex;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+
+    .useful {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+        font-size: 0.7rem;
+        color: black;
+    }
+
+    .polaroid {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .text {
+        width: 98vw;
+        text-align: center;
+        font-size: 21px;
+    }
+
+    .text.top {
+        font-size: 30px;
+    }
+
+    .container {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .right-header a {
+        font-size: 20px;
+    }
+
+    .logo-header {
+        width: 120px;
+    }
+
+    .right-header {
+        position: absolute;
+
+        top: 50px;
+        left: -2px;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        padding-top: 40px;
+        background: linear-gradient(rgb(0 0 0/ 20%), rgb(0 0 0/ 20%)), url(../media/stadium.jpg);
+        background-size: cover;
+    }
+
+
+    .hide {
+        display: none !important;
+    }
+
+    #menuButton {
+        display: block;
+    }
+}
