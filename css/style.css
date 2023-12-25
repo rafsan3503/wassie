@@ -387,7 +387,7 @@ header {
     #hero {
         flex-direction: column;
         width: 100vw;
-        padding-top: 60px;
+        
         align-items: center;
     }
 
@@ -450,7 +450,7 @@ header {
         display: flex;
         flex-direction: column;
         background-color: black;
-        padding-top: 40px;
+        
         
         background-size: cover;
     }
